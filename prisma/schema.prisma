@@ -9,37 +9,21 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-model Anime {
-  id          Int     @id @default(autoincrement())
-  title       String
+model Livro {
+  id           Int    @id @default(autoincrement())
+  title        String
+  author       String
+  publisher    String
+  isbn         String
+  category     String
+  year         Int?
   description String?
-  episodes    Int
-  releaseYear Int
-  studio      String
-  genres      String
-  rating      Float
-  imageUrl    String
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@map("animes")
-}
-
-model Personagem {
-  id          Int     @id @default(autoincrement())
-  name        String
-  description String?
-  age         Int
-  power       Boolean
-  anime       String
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("personagens")
+  @@map("livros")
 }

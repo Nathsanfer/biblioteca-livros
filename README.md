@@ -1,8 +1,34 @@
-# Tutorial: Criando um Backend Node.js para Gerenciamento de Animes
+# Desafio: Desenvolvimento de API Backend com CRUD Completo e Prisma ORM
 
-Este tutorial vai te guiar na criação de uma API REST para gerenciar uma coleção de animes, utilizando Node.js com Express. Vamos construir um CRUD completo seguindo uma arquitetura organizada com routes, controllers e models, usando um array em memória para armazenar os dados.
+## Contexto
 
-## Capacidades Técnicas Trabalhadas
+Uma biblioteca municipal está passando por um processo de modernização e precisa de um sistema digital para gerenciar seu acervo de livros. A instituição deseja ter uma plataforma onde possa cadastrar, consultar, atualizar e remover informações sobre os livros disponíveis para empréstimo. Para isso, é necessário desenvolver uma API backend que permitirá a gestão completa do acervo bibliográfico.
+
+## Modelagem dos dados - Tabela de livros
+
+```prisma
+model Livro {
+  id           Int    @id @default(autoincrement())
+  title        String
+  author       String
+  publisher    String
+  isbn         String
+  category     String
+  year         Int?
+  description String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("livros")
+}
+```
+
+
+
+
+
+
+
 
 - Utilizar paradigma da programação orientada a objetos
 - Definir os elementos de entrada, processamento e saída para a programação da aplicação web
