@@ -4,7 +4,7 @@
 
 Uma biblioteca municipal está passando por um processo de modernização e precisa de um sistema digital para gerenciar seu acervo de livros. A instituição deseja ter uma plataforma onde possa cadastrar, consultar, atualizar e remover informações sobre os livros disponíveis para empréstimo. Para isso, é necessário desenvolver uma API backend que permitirá a gestão completa do acervo bibliográfico.
 
-## Insruções de instalação 
+## Instruções de instalação 
 
 - Clone o repositório
 - Dê um npm install para instalar as dependências
